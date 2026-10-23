@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="디지털튜터 연수 마지막 날, 함께 만든 웹앱과 수업 자료를 모아 두는 자료실입니다.">
+  <meta name="theme-color" content="#f2f6fa">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' https:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>디지털튜터 자료실 · 함께 만든 것들의 서가</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#collection">자료 목록 바로가기</a>
+  <div class="mist" aria-hidden="true"></div>
+  <div class="wrap">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="디지털튜터 자료실 처음으로"><span class="brand-icon">dt<span>✳</span></span><span><strong>디지털튜터 자료실</strong><small>OUR LEARNING ARCHIVE</small></span></a>
+      <nav aria-label="주 메뉴"><a href="#collection">모든 자료</a><button class="button dark compact" data-open-register>자료 등록 <span aria-hidden="true">＋</span></button></nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy"><p class="eyebrow"><span></span> DIGITAL TUTOR · LAST DAY</p><h1 id="hero-title">함께 만든 자료,<br><em>다시 꺼내 쓰는 서가.</em></h1><p class="lead">연수 마지막 날의 아이디어가<br>다음 수업의 시작이 될 수 있도록.<br>우리의 도구와 자료를 이곳에 모아 둡니다.</p><div class="hero-actions"><a class="button aqua" href="#collection">자료 둘러보기 <span aria-hidden="true">↓</span></a><button class="text-button" data-open-register>내 자료도 남기기 <span aria-hidden="true">↗</span></button></div><div class="stats"><span><strong id="total-count">—</strong>개의 자료</span><span><strong>6</strong>개 모둠이 함께</span><span class="live"><i></i> 계속 쌓이는 중</span></div></div>
+        <div id="featured" class="featured" aria-live="polite"><div class="feature-loading">첫 번째 자료를 불러오고 있어요.</div></div>
+      </section>
+
+      <section id="collection" class="collection" aria-labelledby="collection-title">
+        <div class="section-heading"><div><p class="eyebrow">THE COLLECTION</p><h2 id="collection-title">우리의 자료 모아보기 <span id="result-count"></span></h2></div><p>필요할 때, 가볍게 찾아 꺼내 쓰세요.</p></div>
+        <div class="toolbar"><div class="filters" role="group" aria-label="자료 종류" id="categories"></div><div class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="search" type="search" placeholder="제목, 설명, 태그로 찾아보기" aria-label="자료 검색"></div></div>
+        <div class="sub-toolbar"><div class="select-wrap"><label for="group">만든 모둠</label><select id="group"><option value="">모든 모둠</option><option>공통</option><option>1조</option><option>2조</option><option>3조</option><option>4조</option><option>5조</option><option>6조</option></select></div><label class="saved-filter"><input id="saved-only" type="checkbox"><span>☆</span> 담아 둔 자료만</label><div class="sort-wrap"><label class="sr-only" for="sort">정렬</label><select id="sort"><option value="newest">최근 등록순</option><option value="oldest">처음 등록순</option><option value="title">이름순</option></select></div></div>
+        <div id="resource-grid" class="resource-grid" aria-live="polite"></div>
+        <div id="empty" class="empty" hidden><span aria-hidden="true">⌕</span><h3>아직 이 서가에는 자료가 없어요.</h3><p id="empty-description">다른 조건으로 찾아보거나 첫 자료를 남겨 주세요.</p><button class="button light" id="clear-filters">모든 자료 보기</button></div>
+        <div id="load-error" class="empty" hidden><h3>자료 목록을 불러오지 못했어요.</h3><p>연결을 확인한 뒤 다시 시도해 주세요.</p><button id="retry" class="button dark">다시 불러오기</button></div>
+      </section>
+
+      <section class="add-banner"><div class="book-mark" aria-hidden="true">＋</div><div><p class="eyebrow">ONE MORE IDEA</p><h2>오늘 만든 것, 여기에도 남겨 주세요.</h2><p>웹앱부터 발표자료, 활동지, 영상까지. 링크 하나로 이어지는 우리의 자료실.</p></div><button class="button dark" data-open-register>자료 등록하기 <span aria-hidden="true">↗</span></button></section>
+    </main>
+
+    <footer><div><strong>디지털튜터 자료실</strong><p>함께 만들고, 서로 배우고, 다시 꺼내 씁니다.</p></div><div class="footer-links"><a href="https://gottkf1208.github.io/quoka-archive/" target="_blank" rel="noopener noreferrer">두목쿼카의 코딩 아카이브 ↗</a><a href="https://github.com/gottkf1208/digitaltutor-archive" target="_blank" rel="noopener noreferrer">자료 관리 ↗</a><button id="export-resources">목록 내려받기 ↓</button></div></footer>
+  </div>
+
+  <dialog id="register-dialog" aria-labelledby="register-title"><div class="dialog-top"><span class="eyebrow">ADD TO OUR ARCHIVE</span><button id="close-dialog" class="icon-button" aria-label="등록창 닫기">×</button></div><h2 id="register-title">새 자료를 서가에 놓기</h2><p class="dialog-intro">강사·자료 관리자용입니다. 입력 후 GitHub에서 저장을 완료하면 모두의 자료실에 반영됩니다.</p><form id="register-form">
+    <label>자료 제목 <span>필수</span><input name="title" required maxlength="80" placeholder="자료의 이름을 적어 주세요"></label>
+    <div class="form-row"><label>자료 종류<select name="category"><option>웹앱·도구</option><option>수업·활동지</option><option>발표·영상</option><option>운영·참고자료</option></select></label><label>만든 모둠<select name="group"><option>공통</option><option>1조</option><option>2조</option><option>3조</option><option>4조</option><option>5조</option><option>6조</option></select></label></div>
+    <label>자료 링크 <span>필수</span><input name="url" type="url" required placeholder="https://" maxlength="1500"><small>웹사이트, 공유된 문서, 영상 또는 파일의 공개 링크를 넣어 주세요.</small></label>
+    <label>한두 문장 소개 <span>필수</span><textarea name="description" rows="3" required maxlength="400" placeholder="어떤 자료이고, 수업에서 어떻게 쓸 수 있나요?"></textarea></label>
+    <div class="form-row"><label>만든 사람<input name="author" maxlength="60" placeholder="이름 또는 팀 이름"></label><label>태그<input name="tags" maxlength="120" placeholder="예: AI, 활동지, 수업설계"></label></div>
+    <label>미리보기 이미지 <span>선택</span><input name="image" type="url" maxlength="1500" placeholder="https:// 이미지 주소"></label>
+    <details><summary>파일 자체를 올리고 싶다면</summary><p><a href="https://github.com/gottkf1208/digitaltutor-archive/upload/main/files" target="_blank" rel="noopener noreferrer">자료 폴더에 파일 올리기 ↗</a>에서 파일을 저장한 뒤, 그 파일의 공개 링크를 위 ‘자료 링크’에 붙여 주세요. 파일은 누구나 볼 수 있게 공개됩니다.</p></details>
+    <p class="form-error" id="form-error" role="alert"></p><div class="form-bottom"><p>다음 화면에서 <b>Commit changes</b>로 저장해 주세요.<br>저장 후 배포가 완료되면 자료 목록에 나타납니다.</p><button class="button aqua" type="submit">GitHub에 저장하러 가기 ↗</button></div>
+  </form></dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>

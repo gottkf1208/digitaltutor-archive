@@ -1,0 +1,13 @@
+{
+  "id": "gallery-walk",
+  "title": "갤러리워크 투표 프로그램",
+  "description": "우리 조와 이름을 등록하고, 취향 타일 12개로 다른 모둠의 작품을 응원해요. 직접 써 본 경험을 피드백으로 남기는 연수 활동 도구입니다.",
+  "category": "웹앱·도구",
+  "group": "공통",
+  "author": "연수 공통 자료",
+  "url": "https://gottkf1208.github.io/digitaltutorgallery/",
+  "image": "assets/gallery-walk.webp",
+  "tags": ["갤러리워크", "투표", "피드백", "30명·6개 조"],
+  "date": "2026-10-23",
+  "featured": true
+}
