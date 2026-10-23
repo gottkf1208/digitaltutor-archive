@@ -50,7 +50,8 @@
     <div class="form-row"><label>만든 사람<input name="author" maxlength="60" placeholder="이름 또는 팀 이름"></label><label>태그<input name="tags" maxlength="120" placeholder="예: AI, 활동지, 수업설계"></label></div>
     <label>미리보기 이미지 <span>선택</span><input name="image" type="url" maxlength="1500" placeholder="https:// 이미지 주소"></label>
     <details><summary>파일 자체를 올리고 싶다면</summary><p><a href="https://github.com/gottkf1208/digitaltutor-archive/upload/main/files" target="_blank" rel="noopener noreferrer">자료 폴더에 파일 올리기 ↗</a>에서 파일을 저장한 뒤, 그 파일의 공개 링크를 위 ‘자료 링크’에 붙여 주세요. 파일은 누구나 볼 수 있게 공개됩니다.</p></details>
-    <p class="form-error" id="form-error" role="alert"></p><div class="form-bottom"><p>다음 화면에서 <b>Commit changes</b>로 저장해 주세요.<br>저장 후 배포가 완료되면 자료 목록에 나타납니다.</p><button class="button aqua" type="submit">GitHub에 저장하러 가기 ↗</button></div>
+    <p class="form-error" id="form-error" role="alert"></p><div class="form-bottom"><p>작성한 내용을 준비한 뒤 GitHub에서 저장합니다.<br>저장 후 배포가 완료되면 자료 목록에 나타납니다.</p><button class="button aqua" type="submit">등록 내용 준비하기 →</button></div>
+    <div id="publish-ready" class="publish-ready" hidden aria-live="polite"><strong id="publish-title"></strong><p>아래 링크를 열고 <b>Commit changes</b>를 눌러 저장해 주세요.</p><a id="github-save" class="button dark" target="_blank" rel="noopener noreferrer">GitHub에서 저장 완료하기 ↗</a></div>
   </form></dialog>
   <div id="toast" class="toast" role="status" hidden></div>
 </body>
